@@ -42,6 +42,11 @@ canvas {
   margin-left: 1em;
 }
 
+#header nav p {
+
+  margin-right: 1em;
+}
+
 #header nav ul {
   display: flex;
   list-style: none;
