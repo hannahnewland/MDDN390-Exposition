@@ -1,0 +1,4 @@
+ - Add if statement to exhibition.js so it knows when to go into swapping mode; if it's just been swapped with a mouse press it needs to restart the timer.
+ - Add newspaper section to exhibition.
+ - Create web mode.
+
