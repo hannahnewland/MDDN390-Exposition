@@ -5,12 +5,27 @@ let screenHeight = window.innerHeight;
 var content = [
 '"How can you have a waka on the road?"', 
 '"We find the question offensive, it seems \n to assume people should be qualified \n by race to have an opinion."',
-'"This government is focused on turning \n around years of decline in Māori \n outcomes."'
+'"This government is focused on turning \n around years of decline in Māori \n outcomes."',
+'"I have seen that sort of philosophy \n before. I saw it in Nazi Germany. \n We all did. "',
+'"We are absolutely commited to reducing \n smoking rates."', 
+'"I think it is pretty unfair."', 
+'"We have long been sympathetic to \n Israel."',
+'"[Winston Peters] is the \n least trustworthy person in NZ Politics."',
+'"Cycling and walking \n initiatives are a waste of time and money."',
+'"I encourage all of you to go out there, \n have more babies if you wish, \n that would be helpful."'
+
 ]; //variable for text string
 
 var subcontent = [ '- Winston Peters, on Waka Kotahi.', 
 ' - Act Party Representative, on whether their Treaty Policies had Māori input. ', 
-' - Christopher Luxon, after Ngāpuhi leaders walked out of a meeting with him.'
+' - Christopher Luxon, after Ngāpuhi leaders walked out of a meeting with him.',
+' - Winston Peters, comparing co-governance under Labour to Nazi Germany.',
+' - Shane Reti, after scrapping SmokeFree legislation.', 
+' - Christopher Luxon, on the criticisms and protests of his government.', 
+' - David Seymour, after "agreeing to disagree" with NZ voting for Israel to \n remove themselves from Palestine at the UN.', 
+' - David Seymour, on Winston Peters in September 2023.',
+' - Simeon Brown, Transport Minister.',
+' - Christopher Luxon, on the link between our economic agenda, \n immigration, and the need for more people in NZ.'
 ]
 var index = 0;
 let changeInterval = 17000; //number of milliseconds between changes // 17000
@@ -36,7 +51,7 @@ function setup() {
 function draw() {
   background(0);
 
-  for (let y = yStart; y < height; y += 8000) {//use a for loop to draw the line of text multiple times down the vertical axis
+  for (let y = yStart; y < height; y += 10000) {//use a for loop to draw the line of text multiple times down the vertical axis
 
     for (let c=0; c<content.length; c+=1) {
 
@@ -51,11 +66,6 @@ function draw() {
       text(subcontent[c],35,(y + 1000*c) +20); // sub text
       pop();
 
-      if (content[c] >= 3){
-
-        content[c] = 0;
-      }
-
       
   }
 
@@ -63,15 +73,11 @@ function draw() {
   }
   yStart = yStart - 1; //move the starting point of the loop up to create the scrolling animation, yStart-- is the same as yStart = yStart -1 or yStart-=1
 
-  if (yStart < -2100) {
+  if (yStart < -10500) {
     yStart = screenHeight + 200;
   }
 
-  // if (millis() - lastChangeTime > changeInterval ){
 
-  //   index = (index + 1)% content.length;
-  //   lastChangeTime = millis();
-  // }
 
 }
 
