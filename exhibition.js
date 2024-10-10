@@ -79,7 +79,7 @@ function draw() {
       fill(255,0,0); 
 
        // Wrap the text within a certain width (e.g., 90% of screen width)
-       let textWidthLimit = screenWidth * 0.95;
+       let textWidthLimit = screenWidth * 0.90;
 
        // Adjust text size dynamically
        textSize(scaledTextSize);
