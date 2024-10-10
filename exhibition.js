@@ -1,5 +1,6 @@
 let screenWidth = window.innerWidth;
 let screenHeight = window.innerHeight;
+let main_canvas;
 
 
 var content = [
@@ -33,10 +34,14 @@ let lastChangeTime = 0;
 let yStart = screenHeight; //starting position of the text wall
 
 
+function updateCanvasSize(){
+  screenWidth = window.innerWidth;
+  screenHeight = window.innerHeight;
+  resizeCanvas(screenWidth, screenHeight + 100);  // Adjust canvas size
+  yStart = screenHeight;  // Adjust yStart to new screenHeight
+}
 
 function setup() {
-
-
   main_canvas = createCanvas(screenWidth, screenHeight+100);
   main_canvas.parent('canvasContainer');
 
@@ -78,6 +83,9 @@ function draw() {
   }
 
 
+
+  // Resize the canvas when the window is resized
+window.addEventListener('resize', updateCanvasSize);
 
 }
 

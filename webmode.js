@@ -37,7 +37,7 @@ let yStart = screenHeight; //starting position of the text wall
 function setup() {
 
 
-  main_canvas = createCanvas(screenWidth, screenHeight+100);
+  main_canvas = createCanvas(screenWidth, screenHeight);
   main_canvas.parent('canvasContainer');
 
   textFont('Helvetica');
