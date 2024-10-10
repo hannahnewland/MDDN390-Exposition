@@ -1,21 +1,21 @@
 let screenWidth = window.innerWidth;
 let screenHeight = window.innerHeight;
 let main_canvas;
-let contentTextSize = 70;
-let subcontentTextSize = 40;
+let contentTextSize = 85;
+let subcontentTextSize = 55;
 
 
 var content = [
 '"How can you have a waka on the road?"', 
-'"We find the question offensive, it seems \n to assume people should be qualified \n by race to have an opinion."',
-'"This government is focused on turning \n around years of decline in Māori \n outcomes."',
-'"I have seen that sort of philosophy \n before. I saw it in Nazi Germany. \n We all did. "',
-'"We are absolutely commited to reducing \n smoking rates."', 
+'"We find the question offensive, it seems to assume people should be qualified by race to have an opinion."',
+'"This government is focused on turning around years of decline in Māori outcomes."',
+'"I have seen that sort of philosophy before. I saw it in Nazi Germany. We all did. "',
+'"We are absolutely commited to reducing smoking rates."', 
 '"I think it is pretty unfair."', 
-'"We have long been sympathetic to \n Israel."',
-'"[Winston Peters] is the \n least trustworthy person in NZ Politics."',
-'"Cycling and walking \n initiatives are a waste of time and money."',
-'"I encourage all of you to go out there, \n have more babies if you wish, \n that would be helpful."'
+'"We have long been sympathetic to Israel."',
+'"[Winston Peters] is the least trustworthy person in NZ Politics."',
+'"Cycling and walking initiatives are a waste of time and money."',
+'"I encourage all of you to go out there, have more babies if you wish, that would be helpful."'
 
 ]; //variable for text string
 
@@ -61,6 +61,8 @@ function setup() {
   textSize(contentTextSize * (screenWidth / 1920));
 
   startTime = millis();
+
+  textWrap(WORD);
 }
 
 function draw() {
@@ -76,16 +78,19 @@ function draw() {
 
       fill(255,0,0); 
 
+       // Wrap the text within a certain width (e.g., 90% of screen width)
+       let textWidthLimit = screenWidth * 0.95;
+
        // Adjust text size dynamically
        textSize(scaledTextSize);
-      text(content[c], 35, (y + 1000*c)); //display text
+      text(content[c], 35, (y + 1000*c),textWidthLimit); //display text
       
       push();
       //textSize(40);
       textSize(scaledSubTextSize);
       textAlign(LEFT, TOP);
       textStyle(NORMAL);
-      text(subcontent[c],35,(y + 1000*c) +20); // sub text
+      text(subcontent[c],35,(y + 1000*c) +20,textWidthLimit); // sub text
       pop();
 
       
