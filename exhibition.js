@@ -83,11 +83,11 @@ function draw() {
   }
 
 
-
-  // Resize the canvas when the window is resized
-window.addEventListener('resize', updateCanvasSize);
-
 }
+
+ // Resize the canvas when the window is resized
+ window.addEventListener('resize', updateCanvasSize);
+
 
 
 // function mousePressed(){
