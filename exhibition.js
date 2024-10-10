@@ -1,6 +1,8 @@
 let screenWidth = window.innerWidth;
 let screenHeight = window.innerHeight;
 let main_canvas;
+let contentTextSize = 70;
+let subcontentTextSize = 40;
 
 
 var content = [
@@ -28,10 +30,13 @@ var subcontent = [ '- Winston Peters, on Waka Kotahi.',
 ' - Simeon Brown, Transport Minister.',
 ' - Christopher Luxon, on the link between our economic agenda, \n immigration, and the need for more people in NZ.'
 ]
+
 var index = 0;
 let changeInterval = 17000; //number of milliseconds between changes // 17000
 let lastChangeTime = 0;
 let yStart = screenHeight; //starting position of the text wall
+
+
 
 
 function updateCanvasSize(){
@@ -39,6 +44,10 @@ function updateCanvasSize(){
   screenHeight = window.innerHeight;
   resizeCanvas(screenWidth, screenHeight + 100);  // Adjust canvas size
   yStart = screenHeight;  // Adjust yStart to new screenHeight
+
+  // Dynamically scale text size based on screen size
+  textSize(contentTextSize * (screenWidth / 1920)); // Scale based on 1920px width
+
 }
 
 function setup() {
@@ -48,12 +57,17 @@ function setup() {
   textFont('Helvetica');
   textStyle(BOLD);
   textAlign(LEFT, BOTTOM); //adjust the anchor point of text alignment to the horizontal and vertical centers
-  textSize(70); //make the text 20 pixels in size
+  //textSize(70); //make the text 20 pixels in size
+  textSize(contentTextSize * (screenWidth / 1920));
 
   startTime = millis();
 }
 
 function draw() {
+
+  let scaledTextSize = contentTextSize * (screenWidth / 1920);
+  let scaledSubTextSize = subcontentTextSize * (screenWidth / 1920);
+
   background(0);
 
   for (let y = yStart; y < height; y += 10000) {//use a for loop to draw the line of text multiple times down the vertical axis
@@ -62,10 +76,13 @@ function draw() {
 
       fill(255,0,0); 
 
+       // Adjust text size dynamically
+       textSize(scaledTextSize);
       text(content[c], 35, (y + 1000*c)); //display text
       
       push();
-      textSize(40);
+      //textSize(40);
+      textSize(scaledSubTextSize);
       textAlign(LEFT, TOP);
       textStyle(NORMAL);
       text(subcontent[c],35,(y + 1000*c) +20); // sub text
@@ -88,13 +105,3 @@ function draw() {
  // Resize the canvas when the window is resized
  window.addEventListener('resize', updateCanvasSize);
 
-
-
-// function mousePressed(){
-
-//   index = index +1;
-  
-//   if (index == content.length){
-//     index = 0;
-//   }
-// }
