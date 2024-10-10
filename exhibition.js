@@ -25,18 +25,16 @@ var subcontent = [ '- Winston Peters, on Waka Kotahi.',
 ' - Winston Peters, comparing co-governance under Labour to Nazi Germany.',
 ' - Shane Reti, after scrapping SmokeFree legislation.', 
 ' - Christopher Luxon, on the criticisms and protests of his government.', 
-' - David Seymour, after "agreeing to disagree" with NZ voting for Israel to \n remove themselves from Palestine at the UN.', 
+' - David Seymour, after "agreeing to disagree" with NZ voting for Israel to remove themselves from Palestine at the UN.', 
 ' - David Seymour, on Winston Peters in September 2023.',
 ' - Simeon Brown, Transport Minister.',
-' - Christopher Luxon, on the link between our economic agenda, \n immigration, and the need for more people in NZ.'
+' - Christopher Luxon, on the link between our economic agenda, immigration, and the need for more people in NZ.'
 ]
 
 var index = 0;
 let changeInterval = 17000; //number of milliseconds between changes // 17000
 let lastChangeTime = 0;
 let yStart = screenHeight; //starting position of the text wall
-
-
 
 
 function updateCanvasSize(){
@@ -57,7 +55,6 @@ function setup() {
   textFont('Helvetica');
   textStyle(BOLD);
   textAlign(LEFT, BOTTOM); //adjust the anchor point of text alignment to the horizontal and vertical centers
-  //textSize(70); //make the text 20 pixels in size
   textSize(contentTextSize * (screenWidth / 1920));
 
   startTime = millis();

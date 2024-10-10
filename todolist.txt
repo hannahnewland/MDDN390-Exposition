@@ -1,9 +1,7 @@
 
 To Do List:
 
-- Turn header into drop down menu
 - Create description page
-- Exhibition mode static/animated options button
 - Insert newspapers (page turning by itself?)
 
 
