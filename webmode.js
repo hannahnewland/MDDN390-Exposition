@@ -104,6 +104,8 @@ function mousePressed(){
   if (index == content.length){
     index = 0;
   }
+
+  lastChangeTime = millis();
 }
 
 
