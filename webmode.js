@@ -4,6 +4,26 @@ let main_canvas;
 let contentTextSize = 85;
 let subcontentTextSize = 55;
 
+let Quote1Image1;
+let Quote1Image2;
+let Quote2Image1;
+let Quote2Image2;
+let Quote3Image1;
+let Quote3Image2;
+let Quote4Image1;
+let Quote4Image2;
+let Quote5Image1;
+let Quote5Image2;
+let Quote6Image1;
+let Quote6Image2;
+let Quote7Image1;
+let Quote7Image2;
+let Quote8Image1;
+let Quote8Image2;
+let Quote9Image1;
+let Quote9Image2;
+let Quote10Image1;
+let Quote10Image2;
 
 var content = [
 '"How can you have a waka on the road?"', 
@@ -48,6 +68,31 @@ function updateCanvasSize(){
 
 }
 
+function preload(){
+
+Quote1Image1 = loadImage('/Image Assets/Newspapers_Page_01.jpg');
+Quote1Image2 = loadImage('/Image Assets/Newspapers_Page_02.jpg');
+Quote2Image1 = loadImage('/Image Assets/Newspapers_Page_03.jpg');
+Quote2Image2 = loadImage('/Image Assets/Newspapers_Page_04.jpg');
+Quote3Image1 = loadImage('/Image Assets/Newspapers_Page_05.jpg');
+Quote3Image2 = loadImage('/Image Assets/Newspapers_Page_06.jpg');
+Quote4Image1 = loadImage('/Image Assets/Newspapers_Page_07.jpg');
+Quote4Image2 = loadImage('/Image Assets/Newspapers_Page_08.jpg');
+Quote5Image1 = loadImage('/Image Assets/Newspapers_Page_09.jpg');
+Quote5Image2 = loadImage('/Image Assets/Newspapers_Page_10.jpg');
+Quote6Image1 = loadImage('/Image Assets/Newspapers_Page_11.jpg');
+Quote6Image2 = loadImage('/Image Assets/Newspapers_Page_12.jpg');
+Quote7Image1 = loadImage('/Image Assets/Newspapers_Page_13.jpg');
+Quote7Image2 = loadImage('/Image Assets/Newspapers_Page_14.jpg');
+Quote8Image1 = loadImage('/Image Assets/Newspapers_Page_15.jpg');
+Quote8Image2 = loadImage('/Image Assets/Newspapers_Page_16.jpg');
+Quote9Image1 = loadImage('/Image Assets/Newspapers_Page_17.jpg');
+Quote9Image2 = loadImage('/Image Assets/Newspapers_Page_18.jpg');
+Quote10Image1 = loadImage('/Image Assets/Newspapers_Page_19.jpg');
+Quote10Image2 = loadImage('/Image Assets/Newspapers_Page_20.jpg');
+
+}
+
 function setup() {
 
 
@@ -71,7 +116,20 @@ function draw() {
 
   background(0);
 
+// newspaper stuff
 
+imageMode(CENTER);
+angleMode(DEGREES);
+push();
+
+  image(Quote1Image1, screenWidth/2,screenHeight/2, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+
+pop();
+
+
+
+
+// text stuff 
       fill(255,0,0); 
 
       // Wrap the text within a certain width (e.g., 90% of screen width)

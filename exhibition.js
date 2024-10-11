@@ -93,7 +93,6 @@ function draw() {
       
   }
 
-  // console.log(yStart);
   }
   yStart = yStart - 1; //move the starting point of the loop up to create the scrolling animation, yStart-- is the same as yStart = yStart -1 or yStart-=1
 
