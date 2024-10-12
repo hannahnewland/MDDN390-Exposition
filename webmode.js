@@ -119,10 +119,10 @@ function draw() {
 // newspaper stuff
 
 imageMode(CENTER);
-angleMode(DEGREES);
+//angleMode(DEGREES);
 push();
 
-  image(Quote1Image1, screenWidth/2,screenHeight/2, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  image(Quote1Image1, 200,300, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
 
 pop();
 
