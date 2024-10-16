@@ -1,7 +1,7 @@
 
 To Do List:
 
-- Webmode, reset change timer when mouse has been clicked
+
 - Resize HTML headers
 - Create description page
 - In description page have a section thats like "if you want the newspapers for your own exhibition, here's the files"
