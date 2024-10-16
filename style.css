@@ -111,7 +111,7 @@ canvas {
   color: red;
   margin-right: 1em;
   border: none;
-  font-size: 1em;
+  font-size: 1.5vw;
 
 }
 
@@ -133,7 +133,8 @@ canvas {
   min-width: 120px;
   
   z-index: 1;
-  right: 1em;
+  right: 10px;
+  
 }
 
 .dropdown-content a{
