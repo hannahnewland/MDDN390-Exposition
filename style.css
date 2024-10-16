@@ -129,7 +129,7 @@ canvas {
   position: absolute;
   background-color: none;
   text-align: right;
-  font-size: 18px;
+  font-size: 1.5vw;
   min-width: 120px;
   
   z-index: 1;
