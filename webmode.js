@@ -70,26 +70,26 @@ function updateCanvasSize(){
 
 function preload(){
 
-Quote1Image1 = loadImage('/image-assets/Newspapers_Page_01.jpg');
-Quote1Image2 = loadImage('/image-assets/Newspapers_Page_02.jpg');
-Quote2Image1 = loadImage('/image-assets/Newspapers_Page_03.jpg');
-Quote2Image2 = loadImage('/image-assets/Newspapers_Page_04.jpg');
-Quote3Image1 = loadImage('/image-assets/Newspapers_Page_05.jpg');
-Quote3Image2 = loadImage('/image-assets/Newspapers_Page_06.jpg');
-Quote4Image1 = loadImage('/image-assets/Newspapers_Page_07.jpg');
-Quote4Image2 = loadImage('/image-assets/Newspapers_Page_08.jpg');
-Quote5Image1 = loadImage('/image-assets/Newspapers_Page_09.jpg');
-Quote5Image2 = loadImage('/image-assets/Newspapers_Page_10.jpg');
-Quote6Image1 = loadImage('/image-assets/Newspapers_Page_11.jpg');
-Quote6Image2 = loadImage('/image-assets/Newspapers_Page_12.jpg');
-Quote7Image1 = loadImage('/image-assets/Newspapers_Page_13.jpg');
-Quote7Image2 = loadImage('/image-assets/Newspapers_Page_14.jpg');
-Quote8Image1 = loadImage('/image-assets/Newspapers_Page_15.jpg');
-Quote8Image2 = loadImage('/image-assets/Newspapers_Page_16.jpg');
-Quote9Image1 = loadImage('/image-assets/Newspapers_Page_17.jpg');
-Quote9Image2 = loadImage('/image-assets/Newspapers_Page_18.jpg');
-Quote10Image1 = loadImage('/image-assets/Newspapers_Page_19.jpg');
-Quote10Image2 = loadImage('/image-assets/Newspapers_Page_20.jpg');
+Quote1Image1 = loadImage('/image-assets/newspaperspage_01.jpg');
+Quote1Image2 = loadImage('/image-assets/newspaperspage_02.jpg');
+Quote2Image1 = loadImage('/image-assets/newspaperspage_03.jpg');
+Quote2Image2 = loadImage('/image-assets/newspaperspage_04.jpg');
+Quote3Image1 = loadImage('/image-assets/newspaperspage_05.jpg');
+Quote3Image2 = loadImage('/image-assets/newspaperspage_06.jpg');
+Quote4Image1 = loadImage('/image-assets/newspaperspage_07.jpg');
+Quote4Image2 = loadImage('/image-assets/newspaperspage_08.jpg');
+Quote5Image1 = loadImage('/image-assets/newspaperspage_09.jpg');
+Quote5Image2 = loadImage('/image-assets/newspaperspage_10.jpg');
+Quote6Image1 = loadImage('/image-assets/newspaperspage_11.jpg');
+Quote6Image2 = loadImage('/image-assets/newspaperspage_12.jpg');
+Quote7Image1 = loadImage('/image-assets/newspaperspage_13.jpg');
+Quote7Image2 = loadImage('/image-assets/newspaperspage_14.jpg');
+Quote8Image1 = loadImage('/image-assets/newspaperspage_15.jpg');
+Quote8Image2 = loadImage('/image-assets/newspaperspage_16.jpg');
+Quote9Image1 = loadImage('/image-assets/newspaperspage_17.jpg');
+Quote9Image2 = loadImage('/image-assets/newspaperspage_18.jpg');
+Quote10Image1 = loadImage('/image-assets/newspaperspage_19.jpg');
+Quote10Image2 = loadImage('/image-assets/newspaperspage_20.jpg');
 
 }
 
