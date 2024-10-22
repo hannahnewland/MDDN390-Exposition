@@ -119,10 +119,149 @@ function draw() {
 // newspaper stuff
 
 imageMode(CENTER);
-//angleMode(DEGREES);
+angleMode(DEGREES);
 push();
 
-  image(Quote1Image1, 200,300, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+
+
+// Quote 1 Images
+push();
+
+translate( 300,350 );
+rotate(45);
+  image(Quote1Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  push();
+  translate( 1500,750 );
+rotate(-25);
+  image(Quote1Image2, 100,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  // Quote 2 Images
+  push();
+  translate( 600,500 );
+rotate(180);
+  image(Quote2Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  push();
+  translate( 900,350 );
+rotate(-10);
+  image(Quote2Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  // Quote 3 Images
+
+  push();
+  translate( 200,650 );
+rotate(-20);
+  image(Quote3Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  push();
+  translate( 800,550 );
+rotate(135);
+  image(Quote3Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  // Quote 4 Images
+
+  push();
+  translate( 1200,650 );
+rotate(90);
+  image(Quote4Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  push();
+  translate( 1700,300 );
+rotate(10);
+  image(Quote4Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  // Quote 5 Images
+
+  push();
+  translate( 500,700 );
+rotate(270);
+  image(Quote5Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  push();
+  translate( 1200,400 );
+rotate(225);
+  image(Quote5Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  //Quote 6 Images
+
+  push();
+  translate( 900,800 );
+rotate(-70);
+  image(Quote6Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  push();
+  translate( 600,200 );
+rotate(90);
+  image(Quote6Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  // Quote 7 Images 
+
+  push();
+  translate( 1400,250 );
+rotate(285);
+  image(Quote7Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  push();
+  translate( 150,350 );
+rotate(0);
+  image(Quote7Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  //Quote 8 Images
+
+  push();
+  translate( 1350,800 );
+rotate(45);
+  image(Quote8Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  push();
+  translate(400,500 );
+rotate(-10);
+  image(Quote8Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  // Quote 9 Images
+
+  push();
+  translate( 1400,500 );
+rotate(-10);
+  image(Quote9Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  push();
+  translate( 1050,250 );
+rotate(60);
+  image(Quote9Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  // Quote 10 Images
+
+  push();
+  translate( 1050,600 );
+rotate(-20);
+  image(Quote10Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
+
+  push();
+  translate( 1700,550 );
+rotate(45);
+  image(Quote10Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+  pop();
 
 pop();
 
