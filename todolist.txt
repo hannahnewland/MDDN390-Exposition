@@ -1,8 +1,6 @@
 
 To Do List:
 
-
-- Resize HTML headers
 - Create description page
 - In description page have a section thats like "if you want the newspapers for your own exhibition, here's the files"
 - Insert newspapers (page turning by itself?)
