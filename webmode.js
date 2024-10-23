@@ -108,190 +108,205 @@ function setup() {
 
   textWrap(WORD);
 }
-
 function draw() {
+  background(0);
 
   let scaledTextSize = contentTextSize * (screenWidth / 1920);
   let scaledSubTextSize = subcontentTextSize * (screenWidth / 1920);
 
-  background(0);
+  // Loop through all the images and apply the logic
+  for (let i = 0; i < 10; i++) {
+      let img1 = window[`Quote${i + 1}Image1`];
+      let img2 = window[`Quote${i + 1}Image2`];
 
-// newspaper stuff
+      if (index === i) {
+          // If the current index matches this set of images, show them with full opacity
+          drawingContext.globalAlpha = 1; 
+      } else {
+          // If not, set them to a lower opacity
+          drawingContext.globalAlpha = 0.3; 
+      }
+      imageMode(CENTER);
+      angleMode(DEGREES);
 
-imageMode(CENTER);
-angleMode(DEGREES);
-push();
-
-
-
+      // Draw each quote image based on its position
+      switch (i) {
 // Quote 1 Images
-push();
-
-translate( 300,350 );
-rotate(45);
-  image(Quote1Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  push();
-  translate( 1500,750 );
-rotate(-25);
-  image(Quote1Image2, 100,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  // Quote 2 Images
-  push();
-  translate( 600,500 );
-rotate(180);
-  image(Quote2Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  push();
-  translate( 900,350 );
-rotate(-10);
-  image(Quote2Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  // Quote 3 Images
-
-  push();
-  translate( 200,650 );
-rotate(-20);
-  image(Quote3Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  push();
-  translate( 800,550 );
-rotate(135);
-  image(Quote3Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  // Quote 4 Images
-
-  push();
-  translate( 1200,650 );
-rotate(90);
-  image(Quote4Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  push();
-  translate( 1700,300 );
-rotate(10);
-  image(Quote4Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  // Quote 5 Images
-
-  push();
-  translate( 500,700 );
-rotate(270);
-  image(Quote5Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  push();
-  translate( 1200,400 );
-rotate(225);
-  image(Quote5Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  //Quote 6 Images
-
-  push();
-  translate( 900,800 );
-rotate(-70);
-  image(Quote6Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  push();
-  translate( 600,200 );
-rotate(90);
-  image(Quote6Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  // Quote 7 Images 
-
-  push();
-  translate( 1400,250 );
-rotate(285);
-  image(Quote7Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  push();
-  translate( 150,350 );
-rotate(0);
-  image(Quote7Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  //Quote 8 Images
-
-  push();
-  translate( 1350,800 );
-rotate(45);
-  image(Quote8Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  push();
-  translate(400,500 );
-rotate(-10);
-  image(Quote8Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  // Quote 9 Images
-
-  push();
-  translate( 1400,500 );
-rotate(-10);
-  image(Quote9Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  push();
-  translate( 1050,250 );
-rotate(60);
-  image(Quote9Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  // Quote 10 Images
-
-  push();
-  translate( 1050,600 );
-rotate(-20);
-  image(Quote10Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-  push();
-  translate( 1700,550 );
-rotate(45);
-  image(Quote10Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
-  pop();
-
-pop();
-
-
-
-
-// text stuff 
-      fill(255,0,0); 
-
-      // Wrap the text within a certain width (e.g., 90% of screen width)
-      let textWidthLimit = screenWidth * 0.90;
-
-      // Adjust text size dynamically
-      textSize(scaledTextSize);
-      text(content[index], 50, height/2,textWidthLimit); //display text
-      
+      case 0:
       push();
-      textSize(scaledSubTextSize);
-      textAlign(LEFT, TOP);
-      textStyle(NORMAL);
-      text(subcontent[index],50, height/2 +35,textWidthLimit); // sub text
+      translate(300, 350);
+      rotate(45);
+      image(Quote1Image1, 0, 0, Quote1Image1.width * 0.1, Quote1Image1.height * 0.1);
+      pop();
+              
+      push();
+      translate(1500, 750);
+      rotate(-25);
+      image(Quote1Image2, 100, 0, Quote1Image1.width * 0.1, Quote1Image1.height * 0.1);
+      pop();
+      break;
+
+// Quote 2 Images
+      case 1:
+      push();
+      translate( 600,500 );
+      rotate(180);
+      image(Quote2Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
       pop();
 
-      if (millis() - lastChangeTime > changeInterval ){
-        index = (index + 1)% content.length;
-        lastChangeTime = millis();
+      push();
+      translate( 900,350 );
+      rotate(-10);
+      image(Quote2Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+      break;
+
+// Quote 3 Images
+      case 2:
+      push();
+      translate( 200,650 );
+      rotate(-20);
+      image(Quote3Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+
+      push();
+      translate( 800,550 );
+      rotate(135);
+      image(Quote3Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+      break;
+
+// Quote 4 Images
+      case 3:
+      push();
+      translate( 1200,650 );
+      rotate(90);
+      image(Quote4Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+
+      push();
+      translate( 1700,300 );
+      rotate(10);
+      image(Quote4Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+      break;
+
+// Quote 5 Images
+      case 4:
+      push();
+      translate( 500,700 );
+      rotate(270);
+      image(Quote5Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+
+      push();
+      translate( 1200,400 );
+      rotate(225);
+      image(Quote5Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+      break;
+
+//Quote 6 Images
+      case 5:
+      push();
+      translate( 900,800 );
+      rotate(-70);
+      image(Quote6Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+
+      push();
+      translate( 600,200 );
+      rotate(90);
+      image(Quote6Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+      break;
+
+// Quote 7 Images 
+      case 6:
+      push();
+      translate( 1400,250 );
+      rotate(285);
+      image(Quote7Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+
+      push();
+      translate( 150,350 );
+      rotate(0);
+      image(Quote7Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+      break;
+  
+//Quote 8 Images
+      case 7:
+      push();
+      translate( 1350,800 );
+      rotate(45);
+      image(Quote8Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+
+      push();
+      translate(400,500 );
+      rotate(-10);
+      image(Quote8Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+     break;
+
+// Quote 9 Images
+      case 8:
+      push();
+      translate( 1400,500 );
+      rotate(-10);
+      image(Quote9Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+
+      push();
+      translate( 1050,250 );
+      rotate(60);
+      image(Quote9Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+      break;
+  
+// Quote 10 Images
+      case 9:
+      push();
+      translate( 1050,600 );
+      rotate(-20);
+      image(Quote10Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+
+      push();
+      translate( 1700,550 );
+      rotate(45);
+      image(Quote10Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      pop();
+      break;
+
       }
+  }
 
+  drawingContext.globalAlpha = 1; // Reset alpha to default for text drawing
 
+  // Draw text
+  fill(255, 0, 0);
+  let textWidthLimit = screenWidth * 0.90;
+
+  // Adjust text size dynamically
+  textSize(scaledTextSize);
+  text(content[index], 50, height / 2, textWidthLimit); // display text
+
+  push();
+  textSize(scaledSubTextSize);
+  textAlign(LEFT, TOP);
+  textStyle(NORMAL);
+  text(subcontent[index], 50, height / 2 + 35, textWidthLimit); // sub text
+  pop();
+
+  if (millis() - lastChangeTime > changeInterval) {
+      index = (index + 1) % content.length;
+      lastChangeTime = millis();
+  }
 }
+
 
 
 function mousePressed(){
@@ -308,3 +323,4 @@ function mousePressed(){
 
  // Resize the canvas when the window is resized
  window.addEventListener('resize', updateCanvasSize);
+
