@@ -52,7 +52,7 @@ var subcontent = [ '- Winston Peters, on Waka Kotahi.',
 ]
 
 var index = 0;
-let changeInterval = 10000; //number of milliseconds between changes // 17000
+let changeInterval = 2000; //number of milliseconds between changes // 17000
 let lastChangeTime = 0;
 let yStart = screenHeight; //starting position of the text wall
 
