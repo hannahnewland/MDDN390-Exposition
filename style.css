@@ -30,6 +30,31 @@ canvas {
   letter-spacing: 0.025em;
 }
 
+/* Paragraph stuff */
+
+#paragraph {
+
+  position: fixed;
+  top: 15vw;
+  margin-left: 1.5em;
+  margin-right: 20em;
+}
+
+#paragraph2 {
+
+  position: fixed;
+  top: 27vw;
+  margin-left: 1.5em;
+  margin-right: 20em;
+}
+
+.paragraphinfo {
+
+
+  color: red;
+  font-family: "Helvetica", "sans-serif";
+  font-size: 1.5vw;
+}
 /* Header :) */
 
 #header {
