@@ -130,7 +130,10 @@ function draw() {
       angleMode(DEGREES);
 
       // Draw each quote image based on its position
+      push();
+      translate(-200,-50);
       switch (i) {
+  
 // Quote 1 Images
       case 0:
       push();
@@ -282,6 +285,7 @@ function draw() {
       break;
 
       }
+      pop();
   }
 
   drawingContext.globalAlpha = 1; // Reset alpha to default for text drawing
