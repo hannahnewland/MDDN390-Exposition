@@ -131,7 +131,7 @@ function draw() {
 
       // Draw each quote image based on its position
       push();
-      translate(-200,-50);
+      translate((screenWidth/10) - 400,(screenHeight/10)-150);
       switch (i) {
   
 // Quote 1 Images
