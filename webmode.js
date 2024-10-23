@@ -114,6 +114,7 @@ function draw() {
   let scaledTextSize = contentTextSize * (screenWidth / 1920);
   let scaledSubTextSize = subcontentTextSize * (screenWidth / 1920);
 
+
   // Loop through all the images and apply the logic
   for (let i = 0; i < 10; i++) {
       let img1 = window[`Quote${i + 1}Image1`];
@@ -129,158 +130,164 @@ function draw() {
       imageMode(CENTER);
       angleMode(DEGREES);
 
+      let scaleFactor = screenWidth / 1920;  // Adjust based on your reference resolution
+    let imageWidth = Quote1Image1.width * 0.13 * scaleFactor;
+    let imageHeight = Quote1Image1.height * 0.13 * scaleFactor;
+
+     let centerX = screenWidth / 2;
+    let centerY = (screenHeight / 2) +50;
+
       // Draw each quote image based on its position
       push();
-      translate((screenWidth/10) - 400,(screenHeight/10)-150);
       switch (i) {
   
 // Quote 1 Images
       case 0:
       push();
-      translate(300, 350);
+      translate(centerX -660, centerY - 190); //300, 350
       rotate(45);
-      image(Quote1Image1, 0, 0, Quote1Image1.width * 0.1, Quote1Image1.height * 0.1);
+      image(Quote1Image1, 0, 0, imageWidth, imageHeight);
       pop();
               
       push();
-      translate(1500, 750);
+      translate(centerX +540, centerY +210); // 1500, 750
       rotate(-25);
-      image(Quote1Image2, 100, 0, Quote1Image1.width * 0.1, Quote1Image1.height * 0.1);
+      image(Quote1Image2, 100, 0, imageWidth, imageHeight);
       pop();
       break;
 
 // Quote 2 Images
       case 1:
       push();
-      translate( 600,500 );
+      translate( centerX - 360, centerY - 40 ); //600, 500
       rotate(180);
-      image(Quote2Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote2Image1, 0,0, imageWidth, imageHeight); 
       pop();
 
       push();
-      translate( 900,350 );
+      translate(centerX - 60, centerY -190 ); // 900, 350
       rotate(-10);
-      image(Quote2Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote2Image2, 0,0, imageWidth, imageHeight); 
       pop();
       break;
 
 // Quote 3 Images
       case 2:
       push();
-      translate( 200,650 );
+      translate(centerX -760, centerY + 110 ); // 200, 650
       rotate(-20);
-      image(Quote3Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote3Image1, 0,0, imageWidth, imageHeight); 
       pop();
 
       push();
-      translate( 800,550 );
+      translate(centerX - 160, centerY +10); // 800, 550
       rotate(135);
-      image(Quote3Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote3Image2, 0,0, imageWidth, imageHeight); 
       pop();
       break;
 
 // Quote 4 Images
       case 3:
       push();
-      translate( 1200,650 );
+      translate(centerX + 240, centerY +110 ); // 1200, 650
       rotate(90);
-      image(Quote4Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote4Image1, 0,0, imageWidth, imageHeight); 
       pop();
 
       push();
-      translate( 1700,300 );
+      translate(centerX +740, centerY - 240 ); // 1700, 300
       rotate(10);
-      image(Quote4Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote4Image2, 0,0,imageWidth, imageHeight); 
       pop();
       break;
 
 // Quote 5 Images
       case 4:
       push();
-      translate( 500,700 );
+      translate( centerX - 460, centerY +160 ); // 500, 700
       rotate(270);
-      image(Quote5Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote5Image1, 0,0, imageWidth, imageHeight); 
       pop();
 
       push();
-      translate( 1200,400 );
+      translate(centerX +240, centerY -140 ); //1200, 400
       rotate(225);
-      image(Quote5Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote5Image2, 0,0, imageWidth, imageHeight); 
       pop();
       break;
 
 //Quote 6 Images
       case 5:
       push();
-      translate( 900,800 );
+      translate(centerX - 60, centerY +260 ); //900, 800
       rotate(-70);
-      image(Quote6Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote6Image1, 0,0,imageWidth, imageHeight); 
       pop();
 
       push();
-      translate( 600,200 );
+      translate(centerX - 260, centerY - 340); // 600, 200
       rotate(90);
-      image(Quote6Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote6Image2, 0,0,imageWidth, imageHeight); 
       pop();
       break;
 
 // Quote 7 Images 
       case 6:
       push();
-      translate( 1400,250 );
+      translate( centerX + 440, centerY -290 ); // 1400, 250
       rotate(285);
-      image(Quote7Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote7Image1, 0,0,imageWidth, imageHeight); 
       pop();
 
       push();
-      translate( 150,350 );
+      translate( centerX - 810, centerY - 190 ); // 150, 350
       rotate(0);
-      image(Quote7Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote7Image2, 0,0,imageWidth, imageHeight); 
       pop();
       break;
   
 //Quote 8 Images
       case 7:
       push();
-      translate( 1350,800 );
+      translate(centerX + 390, centerY +260); //1350, 800
       rotate(45);
-      image(Quote8Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote8Image1, 0,0, imageWidth, imageHeight); 
       pop();
 
       push();
-      translate(400,500 );
+      translate(centerX - 560, centerY -40); //400, 500
       rotate(-10);
-      image(Quote8Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote8Image2, 0,0, imageWidth, imageHeight); 
       pop();
      break;
 
 // Quote 9 Images
       case 8:
       push();
-      translate( 1400,500 );
+      translate(centerX + 440, centerY - 40); //1400, 500
       rotate(-10);
-      image(Quote9Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote9Image1, 0,0, imageWidth, imageHeight); 
       pop();
 
       push();
-      translate( 1050,250 );
+      translate(centerX +90, centerY - 290 ); // 1050, 250
       rotate(60);
-      image(Quote9Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote9Image2, 0,0,imageWidth, imageHeight); 
       pop();
       break;
   
 // Quote 10 Images
       case 9:
       push();
-      translate( 1050,600 );
+      translate( centerX + 90, centerY + 60 ); // 1050, 600
       rotate(-20);
-      image(Quote10Image1, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote10Image1, 0,0,imageWidth, imageHeight); 
       pop();
 
       push();
-      translate( 1700,550 );
+      translate( centerX + 740, centerY + 10 ); //1700, 550
       rotate(45);
-      image(Quote10Image2, 0,0, Quote1Image1.width*0.1, Quote1Image1.height*0.1); 
+      image(Quote10Image2, 0,0, imageWidth, imageHeight); 
       pop();
       break;
 
