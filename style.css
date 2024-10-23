@@ -40,6 +40,12 @@ canvas {
   margin-right: 20em;
 }
 
+#paragraph a {
+
+  color: white;
+
+}
+
 #paragraph2 {
 
   position: fixed;
@@ -48,12 +54,18 @@ canvas {
   margin-right: 20em;
 }
 
+#paragraph2 a {
+
+  color: white;
+}
+
 .paragraphinfo {
 
 
   color: red;
   font-family: "Helvetica", "sans-serif";
   font-size: 1.5vw;
+  text-decoration: none;
 }
 /* Header :) */
 
@@ -157,4 +169,31 @@ canvas {
 .dropdown-content a:hover {box-shadow: 0px 8px 16px 0px rgba(255, 0, 0, 0.2);}
 
 .dropdown:hover .dropdown-content {display:block;}
+
+
+#imglandscape{
+
+margin-top: 500px;
+
+width: 100%
+
+}
+
+#imgportrait{
+
+  margin-top: 500px;
+  
+  width:345.6px;
+  height:518.4px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  
+  padding: none;
+}
+
 
